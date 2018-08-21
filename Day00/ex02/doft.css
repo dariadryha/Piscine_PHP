@@ -1,0 +1,131 @@
+body {
+	background-color: #505050;
+}
+
+header {
+	padding: 20px 10% 0;
+}
+
+.head {
+	position: relative;
+	width: 100%;
+	border-radius: 10px;
+	background-color: #909090;
+	height: 150px;
+	box-shadow: 10px 10px 10px;
+}
+
+#name {
+	width: 50%;
+	height: 130px;
+	margin: 10px;
+	position: absolute;
+}
+
+#loupe {
+	width: 20%;
+	height: 110px;
+	position: absolute;
+	top: 60px;
+	right: 46px;
+}
+
+#reload {
+	position: absolute;
+	width: 2%;
+	top: 10px;
+	right: 10px;
+}
+
+#close {
+	position: absolute;
+	width: 2%;
+	right: 10px;
+	bottom: 10px;
+}
+
+#main {
+	display: flex;
+	margin-top: 20px;
+	padding: 0 12%;
+}
+
+#main div {
+	background: #909090;
+}
+
+#center {
+	width: 70%;
+	height: 545px;
+	margin-right: 2%;
+	padding: 7px;
+	border-radius: 7px;
+	box-shadow: 10px 10px 10px;
+}
+.bar {
+	height: 400px;
+	margin-right: 2%; 
+	width: 140px;
+	border-radius: 7px;
+	box-shadow: 10px 10px 10px;
+	padding: 19px 0px 26px;
+}
+.bar img {
+	width: 69px;
+	margin-bottom: 14px; 
+}
+
+#cluster {
+	width: 100%;
+	height: 545px;
+}
+
+#oeil{
+	border: 3px solid red;
+	border-radius: 4px;
+}
+
+div #brick {
+	width: 85%;
+	height: 69px;
+	background: #FFFFFF;
+	background-image: url(resources/brick.jpg);
+}
+
+#bottom {
+	width: 30%;
+	min-width: 300px;
+	height: 150px;
+	background: #88FF89;
+	border-radius: 10px;
+	position: absolute;
+	box-shadow: 10px 10px 10px;
+	top: 690px;
+	left: 100px;
+	padding: 20px;
+	font-size: 20px;
+}
+
+#bottom p {
+	margin: 0;
+}
+
+#entr {
+	font-size: 30px;
+}
+
+#cursive {
+	font-style: italic;
+}
+
+input {
+	width: 280px;
+}
+
+button {
+	height: 21px;
+}
+
+#ord {
+	text-shadow: 4px 4px 5px red;
+}

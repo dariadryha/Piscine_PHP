@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>It’s over 9000</title>
+	<style type="text/css">
+		form {
+			width: 500px;
+			margin: 200px auto;
+		}
+	</style>
+	<script type="text/javascript">
+		window.setInterval("alert('Please, use me...');", 30000);
+		function calc(left, oper, right) {
+			if (oper == '*')
+				return (left * right);
+			if (oper == '+')
+				return (left + right);
+			if (oper == '-')
+				return (left - right);
+			if (oper == '/')
+				return (left / right);
+			if (oper == '%')
+				return (left % right);
+		}
+		function my_Function() {
+			var left = document.getElementById('left').value;
+			var right = document.getElementById('right').value;
+			if (!left.match(/^\d+$/) || !right.match(/^\d+$/) ||
+				left.match(/^[0]\d+/) || right.match(/^[0]\d+/))
+			{
+				alert('Error :(');
+				return ;
+			}
+			left = parseInt(left, 10);
+			right = parseInt(right, 10);
+			var oper = document.getElementById('select').value;
+			var res = calc(left, oper, right);
+			console.log(res);
+			if ((oper == '%' || oper == '/') && right == 0)
+				alert('It’s over 9000!');
+			else
+				alert(res);
+		}
+	</script>
+</head>
+<body>
+	<form name="calc">
+		<input id="left" type="text"/>
+		<select id="select">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			<option>%</option>
+		</select>
+		<input id="right" type="text"/>
+		<input type="submit" value="Try me!" onclick="my_Function()"/>
+	</form>
+</body>
+</html>

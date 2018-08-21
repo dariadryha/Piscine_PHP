@@ -1,0 +1,18 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles XYZ coordinates.
+An instance can be contructed like:
+new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 1.0 ) );
+
+or:
+new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 1.0 , 'w' => 0.5) );
+
+or like this:
+new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 1.0 , 'w' => 0.5, 'color' => <see ex00> ) );
+
+Default values are:
+w = 1.0 and color = 0xffffff.
+
+You can also get value of instance(x, y, z, w or color) using method get_NAME() or 
+set value of instance (x, y, z, w or color) using method set_NAME(); 
+
+---------------------------------------------------------------------- Vertex ->

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>It’s over 9000</title>
+	<style type="text/css">
+		form {
+			width: 500px;
+			margin: 200px auto;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<form name="calc">
+		<input id="left" type="text"/>
+		<select id="select">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			<option>%</option>
+		</select>
+		<input id="right" type="text"/>
+		<input id="submit" type="submit" value="Try me!"/>
+	</form>
+	<script>
+		window.setInterval("alert('Please, use me...');", 30000);
+		function calc(left, oper, right) {
+			if (oper == '*')
+				return (left * right);
+			if (oper == '+')
+				return (left + right);
+			if (oper == '-')
+				return (left - right);
+			if (oper == '/')
+				return (left / right);
+			if (oper == '%')
+				return (left % right);
+		}
+		$("#submit").click(function() {
+			var left = $("#left").val();
+			var right = $("#right").val();
+			if (!left.match(/^\d+$/) || !right.match(/^\d+$/) ||
+				left.match(/^[0]\d+/) || right.match(/^[0]\d+/))
+			{
+				alert('Error :(');
+				return ;
+			}
+			left = parseInt(left, 10);
+			right = parseInt(right, 10);
+			var oper = $("#select").val();
+			var res = calc(left, oper, right);
+			console.log(res);
+			if ((oper == '%' || oper == '/') && right == 0)
+				alert('It’s over 9000!');
+			else
+				alert(res);
+		});
+	</script>
+</body>
+</html>
